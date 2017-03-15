@@ -1,0 +1,6 @@
+Assignment 2
+
+client.c: the client will request the file size from server. Once it gets the size, it will then parse it into chunks and offset. From there, it will send these two values back to the server to request to download a file. Once all files are downloaded, it will then assemble it into one file.
+
+server.c: the server will tell the client the file size, then it will receive the chunk size and offset value from the client. Once it has these two values, it will then start downloading the files. If the server does not have the file, it will move on to the next server to check if other servers have the files. If they do, then those servers will start break down the files and start downloading. Once on of them are done, then the first chunks of files will be downloaded by the server that's done.
+
