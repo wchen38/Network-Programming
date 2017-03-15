@@ -1,0 +1,43 @@
+Assignment 1
+
+Directory:
+	src
+		server.c
+		client.c
+		Makefile
+	bin	
+		server
+		client
+	doc	
+		README	
+
+server.c : Sets up a server using TCP protocol, receives commands from client and send the response back to client. 
+client.c : Connects to server, send the commands from stdin to server and receives the response and print out the result.
+Makefile: compiles all .c file and create  executables. 
+server : An executable file that can set up a server
+client : An executable file that can connects to server
+
+Procedure to run the server and client program:
+	Step 1 : Type "./server 1234" in terminal to open server connection.
+	Step 2 : Open a new terminal and type "./client 127.0.0.1 1234" to connect to the server.
+	Step 3 : Type any shell commands below to test the program:
+				cat /etc/resolv.conf
+				cat <filename>
+				date
+				df -h
+				du
+				echo $PATH
+				echo <environment variable>
+				free
+				last
+				ps aux
+				pwd
+				set
+				tty
+				uname -a
+				uptime
+				who
+				exit
+
+Procedure to run the python script:
+	type in "python3 test_ex1.py" in terminal and it will tell the program run successful if everything matches. First time you run the program, it might give you mismatch results but if you run the python code again, it will tell you everything matches. I believe the reason is that there might be misconnection wit server and client.
